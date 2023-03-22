@@ -7,8 +7,9 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params }) {
-  const slug = '/' + (params?.slug ?? ['']).join('/');
+export async function getStaticProps({ const first = useContext(second) }) {
+  console.log(context)
+  const slug = '/' + (context.params?.slug ['']).join('/');
   const page = await getPageFromSlug(slug);
   return { props: { page } };
 }
